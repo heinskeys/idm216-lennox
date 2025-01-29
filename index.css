@@ -10,10 +10,17 @@
 }
 
 /* ------------------------------------------ */
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moderat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ------------------------------------------ */
 /* GENERAL STYLES */
 body {
     margin: 0;
     font-family: 'Moderat', sans-serif;
+    font-family: 'Roboto', sans-serif; 
     background-color: var(--primary-bg-color);
     color: var(--primary-font-color);
 }
@@ -26,6 +33,7 @@ header {
     padding: 20px 0;
     background-color: var(--primary-font-color);
     color: white;
+    font-family: 'Inter', sans-serif; 
 }
 
 .container {
@@ -37,13 +45,26 @@ header {
 /* TEAM SECTION */
 .team-section {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+}
+
+.row-1 {
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly; 
+}
+
+.row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 105px; 
 }
 
 .team-member {
-    width: 250px;
     text-align: center;
 }
 
@@ -52,6 +73,36 @@ header {
     height: 250px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    /* .team-section {
+        grid-template-columns: repeat(2, 1fr); 
+    } */
+    .row-2 {
+        gap: 0px;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 768px) {
+    /* .team-section {
+        grid-template-columns: repeat(2, 1fr); 
+    } */
+    .row-2 {
+        gap: 0px;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 600px) {
+    /* .team-section {
+        grid-template-columns: 1fr; 
+    } */
+    .row-2 {
+        gap: 0px;
+        justify-content: space-evenly;
+    }
 }
 
 /* TEAM ROLES & TEAM LINKS */
@@ -75,6 +126,7 @@ section h2 {
     text-align: center;
     font-family: 'Moderat', sans-serif;
     font-weight: bold;
+    font-family: 'Moderat', sans-serif; 
     margin-bottom: 20px;
 }
 
